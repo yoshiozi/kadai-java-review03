@@ -17,15 +17,15 @@ public class BaseBallTeam {
     }
 
     //勝率メソッドの作成
-    public static double getRate(int win,int lose){
-        double result = (double) win/( win + lose);
+    public double getRate(){
+        double result = (double) this.win/(this.win + this.lose);
         return result;
     }
 
     //レポートのメソッド成績の詳細表示する
     public void report() {
     double result;
-    result = getRate(win,lose);
+    result = getRate();
     System.out.println (name + "の2022年の成績は" + win + "勝" + lose + "敗" + draw + "分、勝率は" + result + "です。");
     }
 
